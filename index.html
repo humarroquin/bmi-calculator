@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Body Mass Index Calculator</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Body Mass Index Calculator
+    <title>Frontend Mentor | Body Mass Index Calculator</title>
+  </head>
+  <body>
+    <header>
+      <img src="/assets/images/logo.svg" alt="BMI logo" />
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-wrapper">
+          <div class="hero__content">
+            <h1>Body Mass Index Calculator</h1>
+            <p>
+              Better understand your weight in relation to your height using our
+              body mass index (BM) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
+          </div>
+          <div class="hero__form-wrapper">
+            <form action="">
+              <h2>Enter your details below</h2>
+              <div class="form-section">
+                <input id="metric" type="radio" name="system" />
+                <label for="metric">Metric</label>
+                <input id="imperial" type="radio" name="system" />
+                <label for="imperial">Imperial</label>
+              </div>
+              <div class="form-section">
+                <label for="height">Height</label>
+                <input id="height" type="number" name="physical-size" />
+                <label for="width">Width</label>
+                <input id="width" type="number" name="physical-size" />
+              </div>
+              <div class="form-section">
+                <div class="form-message">
+                  <p>Welcome!</p>
+                  <p>Enter your height and weight and you’ll see your BMI result here</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  Better understand your weight in relation to your height using our 
-  body mass index (BM) calculator. While BMI is not the sole determinant 
-  of a healthy weight, it offers a valuable starting point to evaluate 
-  your overall health and well-being.
-
-  Enter your details below
-
-  Metric
-  Imperial
-
-  Height
-  Weight
-
+    <!--
   Your BMI is...
-
-  <!-- add score -->
-
-  Your BMI suggests you're <!-- add classification -->. 
-  Your ideal weight is between <!-- add range -->.
+  Your BMI suggests you're . 
+  Your ideal weight is between .
 
   What your BMI result means
 
@@ -80,6 +109,6 @@
   Certain health concerns may affect individuals of some Black and Asian origins at 
   lower BMIs than others. To learn more, it is advised to discuss this with your 
   GP or practice nurse.
-
-</body>
+-->
+  </body>
 </html>
