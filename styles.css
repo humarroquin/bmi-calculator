@@ -69,11 +69,15 @@ h6 {
 /* VARIABLES */
 :root {
   /* colors */
-  --clr-primary: #005f73;
-  --clr-secondary: #94d2bd;
-  --clr-accent: #e63946;
-  --clr-background: #f1faee;
-  --clr-text: #1d3557;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-gray-500: hsl(215, 17%, 45%);
+  --clr-gray-300: hsl(215, 43%, 77%);
+  --clr-blue-900: hsl(215, 31%, 21%);
+  --clr-blue-500: hsl(227, 92%, 58%);
+  --clr-blue-300: hsl(209, 69%, 82%);
+  --clr-blue-100: hsl(228, 94%, 94%);
+  --gradient: linear-gradient(to right, hsl(183, 95%, 92%), hsl(216, 95%, 92%));
 
   /* font family */
   --ff-headings: "Inter", sans-serif;
@@ -86,6 +90,42 @@ h6 {
 }
 
 /* REUSABLE STYLES */
+/* headings */
+.heading-primary,
+.heading-secondary {
+  margin-bottom: 32px;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-600);
+  color: var(--clr-blue-900);
+}
+
+.heading-primary {
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -5px;
+}
+
+.heading-tertiary {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+/* text */
+.paragrap-sm-text {
+  font-size: 14px;
+}
+
+/* grids */
+.grid-2cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
 
 /* containers */
 .container {
@@ -100,5 +140,103 @@ h6 {
 body {
   font-family: var(--ff-body);
   line-height: 1.5;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
+  color: var(--clr-gray-500);
+}
+
+/* header */
+.header {
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+/* hero */
+.hero-section {
+  padding-block: 176px 121px;
+}
+
+.hero__content {
+  padding-block: 72px;
+}
+
+.hero__heading {
+  max-width: 10.5ch;
+}
+.hero__description {
+  max-width: 465px;
+}
+
+.bmi-form {
+  background-color: var(--clr-white);
+  box-shadow: 16px 32px 62px 0 var(--clr-gray-300);
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 564px;
+}
+.bmi-form__title {
+  margin-bottom: 32px;
+}
+
+.form-section--radio,
+.form-section--number {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.form-section:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
+}
+
+input[type="number"] {
+  border: 1px solid var(--clr-gray-500);
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 24px;
+  color: var(--clr-gray-500);
+  width: 100%;
+  -moz-appearance: textfield; /* Firefox */
+}
+/* For Chrome, Edge, Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-section--radio label {
+  display: flex;
+  gap: 1rem;
+}
+.form-section--number label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  position: relative;
+}
+.measurement-tags {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 1rem;
+  font-size: 24px;
+  font-weight: var(--fw-600);
+  color: var(--clr-blue-500);
+}
+
+.form-message {
+  background-color: var(--clr-blue-500);
+  color: var(--clr-white);
+  padding: 32px;
+  border-radius: 5rem 50rem 50rem 5rem;
+}
+.form-message__title {
+  margin-bottom: 1rem;
+  color: var(--clr-white);
 }

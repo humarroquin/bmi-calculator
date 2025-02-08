@@ -11,20 +11,22 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Body Mass Index Calculator</title>
   </head>
   <body>
-    <header>
-      <img src="/assets/images/logo.svg" alt="BMI logo" />
+    <header class="header container">
+      <img src="./assets/images/logo.svg" alt="BMI logo" />
     </header>
     <main>
-      <section class="hero-section">
+      <section class="hero-section container">
         <!-- content section -->
-        <div class="hero-wrapper">
+        <div class="hero-wrapper grid-2cols">
           <div class="hero__content">
-            <h1>Body Mass Index Calculator</h1>
-            <p>
+            <h1 class="hero__heading heading-primary">
+              Body Mass Index Calculator
+            </h1>
+            <p class="hero__description">
               Better understand your weight in relation to your height using our
               body mass index (BM) calculator. While BMI is not the sole
               determinant of a healthy weight, it offers a valuable starting
@@ -33,25 +35,48 @@
           </div>
           <!-- form section -->
           <div class="hero__form-wrapper">
-            <form action="">
-              <h2>Enter your details below</h2>
-              <div class="form-section">
-                <input id="metric" type="radio" name="system" />
-                <label for="metric">Metric</label>
-                <input id="imperial" type="radio" name="system" />
-                <label for="imperial">Imperial</label>
+            <form class="bmi-form" action="">
+              <h2 class="bmi-form__title heading-tertiary">
+                Enter your details below
+              </h2>
+              <div class="form-section form-section--radio">
+                <label>
+                  <input
+                    id="metric"
+                    type="radio"
+                    name="system"
+                    value="metric"
+                    checked
+                  />
+                  Metric
+                </label>
+                <label>
+                  <input
+                    id="imperial"
+                    type="radio"
+                    name="system"
+                    value="imperial"
+                  />
+                  Imperial
+                </label>
               </div>
-              <div class="form-section">
-                <label for="height">Height</label>
-                <input id="height" type="number" name="physical-size" />
-                <label for="width">Width</label>
-                <input id="width" type="number" name="physical-size" />
+              <div class="form-section form-section--number">
+                <label>
+                  Height
+                  <input id="height" type="number" name="height" required />
+                  <span class="measurement-tags">cm</span>
+                </label>
+                <label>
+                  Width
+                  <input id="width" type="number" name="weight" required />
+                  <span class="measurement-tags">kg</span>
+                </label>
               </div>
               <div class="form-section">
                 <!-- stage 1 message -->
                 <div class="form-message">
-                  <p>Welcome!</p>
-                  <p>
+                  <p class="form-message__title heading-tertiary">Welcome!</p>
+                  <p class="paragrap-sm-text">
                     Enter your height and weight and you’ll see your BMI result
                     here
                   </p>
