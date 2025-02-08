@@ -77,7 +77,11 @@ h6 {
   --clr-blue-500: hsl(227, 92%, 58%);
   --clr-blue-300: hsl(209, 69%, 82%);
   --clr-blue-100: hsl(228, 94%, 94%);
-  --gradient: linear-gradient(to right, hsl(183, 95%, 92%), hsl(216, 95%, 92%));
+  --gradient: linear-gradient(
+    to right,
+    hsl(183, 95%, 92%, 0.3),
+    hsl(216, 95%, 92%)
+  );
 
   /* font family */
   --ff-headings: "Inter", sans-serif;
@@ -156,6 +160,20 @@ body {
 /* hero */
 .hero-section {
   padding-block: 176px 121px;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  background-image: var(--gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0 0 35px 35px;
 }
 
 .hero__content {
