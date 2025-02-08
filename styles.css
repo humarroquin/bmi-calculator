@@ -1,3 +1,29 @@
+/* FONTS */
+/* inter-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/inter-v18-latin-regular.woff2") format("woff2");
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/inter-v18-latin-600.woff2") format("woff2");
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/inter-v18-latin-700.woff2") format("woff2");
+}
+
 /* CSS RESET — Josh Comeau */
 *,
 *::before,
@@ -50,11 +76,12 @@ h6 {
   --clr-text: #1d3557;
 
   /* font family */
-  --ff-headings: "Space Grotesk", sans-serif;
-  --ff-body: "Space Grotesk", sans-serif;
+  --ff-headings: "Inter", sans-serif;
+  --ff-body: "Inter", sans-serif;
 
   /* font weights */
-  --fw-500: 500;
+  --fw-400: 400;
+  --fw-600: 600;
   --fw-700: 700;
 }
 
@@ -71,6 +98,7 @@ h6 {
 
 /* PAGE STYLES */
 body {
+  font-family: var(--ff-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
