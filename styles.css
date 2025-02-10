@@ -98,6 +98,7 @@ h6 {
 .heading-primary,
 .heading-secondary {
   margin-bottom: 2rem;
+  line-height: 1.1;
 }
 .heading-primary,
 .heading-secondary,
@@ -105,18 +106,21 @@ h6 {
   font-family: var(--ff-headings);
   font-weight: var(--fw-600);
   color: var(--clr-blue-900);
+  letter-spacing: -1.5px;
 }
 
 .heading-primary {
   font-size: 4rem;
-  line-height: 1.1;
-  letter-spacing: -5px;
+  letter-spacing: -4px;
+}
+
+.heading-secondary {
+  font-size: 3rem;
 }
 
 .heading-tertiary {
   font-size: 1.5rem;
   line-height: 1.2;
-  letter-spacing: -1.5px;
 }
 
 /* text */
@@ -152,6 +156,7 @@ body {
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   color: var(--clr-gray-500);
+  background-color: var(--clr-white);
 }
 
 /* header */
@@ -264,4 +269,23 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-message__title {
   margin-bottom: 1rem;
   color: var(--clr-white);
+}
+
+/* info */
+.info-section {
+  padding-block: 5.375rem;
+  align-items: center;
+}
+
+.info-section__content {
+  margin-top: 8rem;
+}
+
+.info-section__image {
+  width: 100%;
+  height: 100%;
+}
+/* todo: repeated in the hero section */
+.info-section__description {
+  max-width: 29.0625rem;
 }
