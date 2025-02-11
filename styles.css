@@ -77,10 +77,15 @@ h6 {
   --clr-blue-500: hsl(227, 92%, 58%);
   --clr-blue-300: hsl(209, 69%, 82%);
   --clr-blue-100: hsl(228, 94%, 94%);
-  --gradient: linear-gradient(
+  --gradient-hero: linear-gradient(
     to right,
     hsl(183, 95%, 92%, 0.3),
-    hsl(216, 95%, 92%)
+    hsl(216, 95%, 92%, 0.5)
+  );
+  --gradient-section: linear-gradient(
+    to right,
+    hsl(183, 95%, 92%, 0.1),
+    hsl(216, 95%, 92%, 0.2)
   );
 
   /* font family */
@@ -135,6 +140,12 @@ h6 {
   gap: 2rem;
 }
 
+.grid-3cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
 /* displays */
 .d-flex {
   display: flex;
@@ -174,7 +185,7 @@ body {
 }
 .hero-section::before {
   content: "";
-  background-image: var(--gradient);
+  background-image: var(--gradient-hero);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -288,4 +299,21 @@ input[type="number"]::-webkit-inner-spin-button {
 /* todo: repeated in the hero section */
 .info-section__description {
   max-width: 29.0625rem;
+}
+
+/* habits */
+.habits-section {
+  padding-block: 5.78125rem;
+  background-image: var(--gradient-section);
+  border-radius: 2.1875rem;
+  margin-left: 0.625rem;
+  max-width: 97%;
+}
+
+.habit > img {
+  margin-bottom: 3rem;
+}
+
+.habit .heading-tertiary {
+  margin-bottom: 1.5rem;
 }
