@@ -213,6 +213,30 @@ body {
   max-width: 29.0625rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .header img {
+    margin-inline: auto;
+  }
+  .hero-section::before {
+    width: 100%;
+  }
+  .hero-wrapper {
+    justify-items: center;
+  }
+  .hero__description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero__heading {
+    margin-inline: auto;
+    text-align: center;
+    /* todo: the text align is also repeated on the description above */
+  }
+  .hero__content {
+    padding-bottom: 2.5rem;
+  }
+}
+
 /* hero form */
 .bmi-form {
   background-color: var(--clr-white);
@@ -224,6 +248,12 @@ body {
 }
 .bmi-form__title {
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .bmi-form {
+    max-width: 100%;
+  }
 }
 
 .form-section--radio,
@@ -315,6 +345,19 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 2.1875rem;
   margin-left: 0.625rem;
   max-width: 97%;
+}
+
+@media screen and (max-width: 48rem) {
+  .habits-section {
+    border-radius: 0;
+    max-width: 100%;
+  }
+  .info-section__content {
+    margin-top: 0;
+  }
+  .info-section__description {
+    max-width: 100%;
+  }
 }
 
 .habit > img {
