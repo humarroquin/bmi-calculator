@@ -15,10 +15,12 @@
     <title>Frontend Mentor | Body Mass Index Calculator</title>
   </head>
   <body>
+    <!-- ==== header ==== -->
     <header class="header container">
       <img src="./assets/images/logo.svg" alt="BMI logo" />
     </header>
     <main>
+      <!-- ==== hero ==== -->
       <section class="hero-section">
         <!-- content section -->
         <div class="hero-wrapper container grid-2cols">
@@ -33,14 +35,14 @@
               point to evaluate your overall health and well-being.
             </p>
           </div>
-          <!-- form section -->
+          <!-- ==== form ==== -->
           <div class="hero__form-wrapper">
             <form class="bmi-form" action="">
               <h2 class="bmi-form__title heading-tertiary">
                 Enter your details below
               </h2>
               <div class="form-section form-section--radio">
-                <label class="d-flex">
+                <label class="d-flex" for="metric">
                   <input
                     id="metric"
                     type="radio"
@@ -50,7 +52,7 @@
                   />
                   Metric
                 </label>
-                <label class="d-flex">
+                <label class="d-flex" for="imperial">
                   <input
                     id="imperial"
                     type="radio"
@@ -61,20 +63,20 @@
                 </label>
               </div>
               <div class="form-section form-section--number">
-                <label class="d-flex">
+                <label class="d-flex" for="height">
                   Height
                   <input id="height" type="number" name="height" required />
                   <span class="measurement-tags">cm</span>
                 </label>
-                <label class="d-flex">
-                  Width
-                  <input id="width" type="number" name="weight" required />
+                <label class="d-flex" for="weight">
+                  Weight
+                  <input id="weight" type="number" name="weight" required />
                   <span class="measurement-tags">kg</span>
                 </label>
               </div>
               <div class="form-section">
                 <!-- stage 1 message -->
-                <div class="form-message">
+                <div class="form-message" aria-label="polite">
                   <p class="form-message__title heading-tertiary">Welcome!</p>
                   <p class="paragrap-sm-text">
                     Enter your height and weight and you’ll see your BMI result
@@ -86,6 +88,7 @@
           </div>
         </div>
       </section>
+      <!-- ==== BMI result ==== -->
       <section class="info-section container grid-2cols">
         <!-- image section -->
         <figure>
@@ -95,6 +98,7 @@
             width="564"
             height="533"
             class="info-section__image"
+            loading="lazy"
           />
         </figure>
         <!-- content section -->
@@ -111,6 +115,7 @@
           </p>
         </div>
       </section>
+      <!-- ==== habits ==== -->
       <section class="habits-section">
         <div class="habits-wrapper container grid-3cols">
           <!-- habit 1 -->
@@ -158,6 +163,7 @@
           </div>
         </div>
       </section>
+      <!-- ==== limitations ==== -->
       <section class="limitations-section">
         <div class="section-wrapper container">
           <!-- section title -->
@@ -231,12 +237,5 @@
         </div>
       </section>
     </main>
-
-    <!--
-  Your BMI is...
-  Your BMI suggests you're . 
-  Your ideal weight is between .
-
--->
   </body>
 </html>
