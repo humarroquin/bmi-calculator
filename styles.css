@@ -99,7 +99,7 @@ h6 {
   --fw-700: 700;
 }
 
-/* REUSABLE STYLES */
+/* === REUSABLE STYLES === */
 /* headings */
 .heading-primary,
 .heading-secondary {
@@ -128,7 +128,7 @@ h6 {
 }
 
 /* text */
-.paragrap-sm-text {
+.paragraph-sm-text {
   font-size: 0.875rem;
 }
 
@@ -166,7 +166,7 @@ h6 {
   margin-inline: auto;
 }
 
-/* PAGE STYLES */
+/* ===  PAGE STYLES === */
 body {
   font-family: var(--ff-body);
   line-height: 1.5;
@@ -176,7 +176,7 @@ body {
   background-color: var(--clr-white);
 }
 
-/* header */
+/* === header === */
 .header {
   position: absolute;
   top: 5.5rem;
@@ -184,7 +184,7 @@ body {
   transform: translatex(-50%);
 }
 
-/* hero */
+/* === hero === */
 .hero-section {
   padding-block: 11rem 7.5625rem;
   position: relative;
@@ -193,7 +193,7 @@ body {
   content: "";
   background-image: var(--gradient-hero);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   height: 100%;
   width: 75%;
@@ -222,22 +222,20 @@ body {
   }
   .hero-wrapper {
     justify-items: center;
+    text-align: center;
   }
   .hero__description {
     max-width: 100%;
-    text-align: center;
   }
   .hero__heading {
     margin-inline: auto;
-    text-align: center;
-    /* todo: the text align is also repeated on the description above */
   }
   .hero__content {
     padding-bottom: 2.5rem;
   }
 }
 
-/* hero form */
+/* === hero form === */
 .bmi-form {
   background-color: var(--clr-white);
   padding: 2rem;
@@ -319,7 +317,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: var(--clr-white);
 }
 
-/* info */
+/* === info === */
 .info-section {
   padding-block: 5.375rem;
   align-items: center;
@@ -338,10 +336,11 @@ input[type="number"]::-webkit-inner-spin-button {
   max-width: 29.0625rem;
 }
 
-/* habits */
+/* === habits === */
 .habits-section {
   padding-block: 5.78125rem;
   background-image: var(--gradient-section);
+  background-size: cover;
   border-radius: 2.1875rem;
   margin-left: 0.625rem;
   max-width: 97%;
@@ -368,7 +367,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 1.5rem;
 }
 
-/* limitations */
+/* === limitations === */
 .limitations-section {
   padding-block: 6.5rem;
 }
