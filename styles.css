@@ -330,7 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .result-section__image {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* === habits === */
