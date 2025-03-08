@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Body Mass Index Calculator</title>
   </head>
   <body>
@@ -41,7 +42,8 @@
               <h2 class="bmi-form__title heading-tertiary">
                 Enter your details below
               </h2>
-              <div class="form-section form-section--radio">
+              <!-- !add back to code base -->
+              <!-- <div class="form-section form-section--radio">
                 <label class="d-flex" for="metric">
                   <input
                     id="metric"
@@ -61,7 +63,7 @@
                   />
                   Imperial
                 </label>
-              </div>
+              </div> -->
               <div class="form-section form-section--number">
                 <label class="d-flex" for="height">
                   Height
@@ -75,13 +77,26 @@
                 </label>
               </div>
               <div class="form-section">
-                <!-- stage 1 message -->
-                <div class="form-message" aria-label="polite">
+                <!-- message -->
+                <div class="form-message welcome-message" aria-label="polite">
                   <p class="form-message__title heading-tertiary">Welcome!</p>
                   <p class="paragraph-sm-text">
                     Enter your height and weight and you’ll see your BMI result
                     here
                   </p>
+                </div>
+                <!-- metric -->
+                <div
+                  class="form-message metric-message d-flex hidden"
+                  aria-label="polite"
+                >
+                  <div class="left">
+                    <p class="paragraph-text-bold">Your BMI is...</p>
+                    <p class="heading-primary bmi-result metric-result">0</p>
+                  </div>
+                  <div class="right">
+                    <p class="BMI-description"></p>
+                  </div>
                 </div>
               </div>
             </form>

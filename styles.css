@@ -132,6 +132,10 @@ h6 {
   font-size: 0.875rem;
 }
 
+.paragraph-text-bold {
+  font-weight: var(--fw-600);
+}
+
 .section__description {
   max-width: 29.0625rem;
 }
@@ -159,6 +163,10 @@ h6 {
 /* displays */
 .d-flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 /* containers */
@@ -241,7 +249,6 @@ body {
   background-color: var(--clr-white);
   padding: 2rem;
   border-radius: 1rem;
-  /* todo: check the box shadow again so it matches the design */
   box-shadow: 1rem 2rem 3.875rem 0 var(--clr-gray-300);
   max-width: 35.25rem;
 }
@@ -316,6 +323,13 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-message__title {
   margin-bottom: 1rem;
   color: var(--clr-white);
+}
+.bmi-result {
+  color: var(--clr-white);
+  margin-bottom: 0;
+}
+.left {
+  width: min(30rem, 100%);
 }
 
 /* === result === */
