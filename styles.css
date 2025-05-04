@@ -332,6 +332,11 @@ input[type="number"]::-webkit-inner-spin-button {
   width: min(30rem, 100%);
 }
 
+/* metric message */
+.metric-message {
+  gap: 2rem;
+}
+
 /* === result === */
 .result-section {
   padding-block: 5.375rem;
